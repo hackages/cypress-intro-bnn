@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("search", (searchTerm) => {
+  // query search input
+  // cy.get(".gLFyf.gsfi").type(searchTerm + "{enter}");
+  cy.get(".gLFyf.gsfi").as("searchInput").type(searchTerm);
+
+  // query the search button
+  cy.get(".FPdoLc.tfB0Bf")
+    .children()
+    .children()
+    .first()
+    .as("searchButton")
+    .click();
+  // cy.get("div.UUbT9").invoke("show");
+  // cy.get(".gNO89b").first().click();
+});
