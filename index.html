@@ -1,4 +1,4 @@
-<h1 id="title" data-cy="title">Welcome to this training session by Hackages</h1>
+<!-- <h1 id="title" data-cy="title">Welcome to this training session by Hackages</h1>
 
 
 <ul id="cities">
@@ -12,4 +12,19 @@
 <form id="subscription">
     <input type="email">
     <button type="submit">Send</button>
-</form>
+</form> -->
+
+<button id="btnGetUser">Get User Info</button>
+
+
+<script>
+    function getUserInfo(){
+        fetch('https://api.github.com/users/davyengone').then(console.log)
+    }
+
+    // getUserInfo();
+
+    window.onload = function(){
+        document.getElementById('btnGetUser').addEventListener('click', getUserInfo)
+    }
+</script>
