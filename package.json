@@ -1,0 +1,13 @@
+{
+  "name": "cypress-intro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Davy Engone <4896002+davyengone@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cypress open"
+  },
+  "dependencies": {
+    "cypress": "^6.2.1"
+  }
+}
